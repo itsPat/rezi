@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FeaturedTableViewCellDelegate: class {
+    func didSelect(business: Business)
+}
+
 class FeaturedTableViewCell: UITableViewCell {
     
     static let nib = UINib(nibName: "FeaturedTableViewCell", bundle: .main)
@@ -16,6 +20,8 @@ class FeaturedTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    private weak var delegate: FeaturedTableViewCellDelegate? = nil
     private var featuredSection: FeaturedSection? = nil {
         didSet {
             collectionView.reloadData()
@@ -36,8 +42,9 @@ class FeaturedTableViewCell: UITableViewCell {
         subtitleLabel.text = nil
     }
     
-    func configure(with featuredSection: FeaturedSection) {
+    func configure(with featuredSection: FeaturedSection, delegate: FeaturedTableViewCellDelegate) {
         self.featuredSection = featuredSection
+        self.delegate = delegate
         titleLabel.text = featuredSection.title
         subtitleLabel.text = featuredSection.subtitle
         subtitleLabel.isHidden = featuredSection.subtitle == nil
@@ -45,7 +52,7 @@ class FeaturedTableViewCell: UITableViewCell {
     
 }
 
-extension FeaturedTableViewCell: UICollectionViewDataSource {
+extension FeaturedTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return featuredSection?.businesses.count ?? 0
@@ -58,9 +65,11 @@ extension FeaturedTableViewCell: UICollectionViewDataSource {
         return cell
     }
     
-}
-
-extension FeaturedTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let business = featuredSection?.businesses[indexPath.item] {
+            delegate?.didSelect(business: business)
+        }
+    }
     
 }
 

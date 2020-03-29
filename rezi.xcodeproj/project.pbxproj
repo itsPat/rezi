@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A783AA84242FEC800097F273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA83242FEC800097F273 /* AppDelegate.swift */; };
 		A783AA86242FEC800097F273 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA85242FEC800097F273 /* SceneDelegate.swift */; };
-		A783AA88242FEC800097F273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA87242FEC800097F273 /* ViewController.swift */; };
+		A783AA88242FEC800097F273 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA87242FEC800097F273 /* HomeViewController.swift */; };
 		A783AA8B242FEC800097F273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A783AA89242FEC800097F273 /* Main.storyboard */; };
 		A783AA8D242FEC820097F273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A783AA8C242FEC820097F273 /* Assets.xcassets */; };
 		A783AA90242FEC820097F273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A783AA8E242FEC820097F273 /* LaunchScreen.storyboard */; };
@@ -25,13 +25,15 @@
 		A78EDC132431048100171BE6 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC122431048100171BE6 /* FeaturedSection.swift */; };
 		A7AD7E352431207B00DD268F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD7E342431207B00DD268F /* DetailViewController.swift */; };
 		A7AD7E382431229B00DD268F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD7E372431229B00DD268F /* HapticManager.swift */; };
+		A7AD7E3B2431290B00DD268F /* BusinessDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD7E392431290B00DD268F /* BusinessDetailTableViewCell.swift */; };
+		A7AD7E3C2431290B00DD268F /* BusinessDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7AD7E3A2431290B00DD268F /* BusinessDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A783AA80242FEC800097F273 /* rezi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rezi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A783AA83242FEC800097F273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A783AA85242FEC800097F273 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A783AA87242FEC800097F273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A783AA87242FEC800097F273 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A783AA8A242FEC800097F273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A783AA8C242FEC820097F273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A783AA8F242FEC820097F273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		A78EDC122431048100171BE6 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 		A7AD7E342431207B00DD268F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A7AD7E372431229B00DD268F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		A7AD7E392431290B00DD268F /* BusinessDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A7AD7E3A2431290B00DD268F /* BusinessDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessDetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 			children = (
 				A783AA9D242FFF840097F273 /* BusinessTableViewCell.swift */,
 				A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */,
+				A7AD7E392431290B00DD268F /* BusinessDetailTableViewCell.swift */,
+				A7AD7E3A2431290B00DD268F /* BusinessDetailTableViewCell.xib */,
 				A78EDC0A2430E87700171BE6 /* FeaturedTableViewCell.swift */,
 				A78EDC0B2430E87700171BE6 /* FeaturedTableViewCell.xib */,
 				A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */,
@@ -137,7 +143,7 @@
 		A7AD7E362431208200DD268F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A783AA87242FEC800097F273 /* ViewController.swift */,
+				A783AA87242FEC800097F273 /* HomeViewController.swift */,
 				A7AD7E342431207B00DD268F /* DetailViewController.swift */,
 			);
 			name = ViewControllers;
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7AD7E3C2431290B00DD268F /* BusinessDetailTableViewCell.xib in Resources */,
 				A783AA90242FEC820097F273 /* LaunchScreen.storyboard in Resources */,
 				A783AAA0242FFF840097F273 /* BusinessTableViewCell.xib in Resources */,
 				A78EDC0D2430E87700171BE6 /* FeaturedTableViewCell.xib in Resources */,
@@ -222,10 +229,11 @@
 				A78EDC0C2430E87700171BE6 /* FeaturedTableViewCell.swift in Sources */,
 				A783AA9F242FFF840097F273 /* BusinessTableViewCell.swift in Sources */,
 				A78EDC132431048100171BE6 /* FeaturedSection.swift in Sources */,
-				A783AA88242FEC800097F273 /* ViewController.swift in Sources */,
+				A783AA88242FEC800097F273 /* HomeViewController.swift in Sources */,
 				A78EDC102430EAD000171BE6 /* BusinessCollectionViewCell.swift in Sources */,
 				A783AA84242FEC800097F273 /* AppDelegate.swift in Sources */,
 				A783AA9C242FFC490097F273 /* ImageManager.swift in Sources */,
+				A7AD7E3B2431290B00DD268F /* BusinessDetailTableViewCell.swift in Sources */,
 				A783AA9A242FF8C60097F273 /* Business.swift in Sources */,
 				A7AD7E382431229B00DD268F /* HapticManager.swift in Sources */,
 				A783AA86242FEC800097F273 /* SceneDelegate.swift in Sources */,

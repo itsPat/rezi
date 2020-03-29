@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rezi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="rezi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,28 +36,47 @@
                     <navigationItem key="navigationItem" id="eSu-hS-xn4"/>
                     <connections>
                         <outlet property="tableView" destination="vja-hs-Lt6" id="Ck8-6i-qxV"/>
-                        <segue destination="TWr-qj-08v" kind="show" id="1QM-UK-hN5"/>
+                        <segue destination="TWr-qj-08v" kind="show" identifier="showDetail" id="Y7t-PC-d36"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="120.53571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Az8-qz-Bca">
             <objects>
-                <viewController id="TWr-qj-08v" sceneMemberID="viewController">
+                <viewController id="TWr-qj-08v" customClass="DetailViewController" customModule="rezi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qD7-E7-CfN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="400" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YJt-x1-yLB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TWr-qj-08v" id="hoG-yK-zM8"/>
+                                    <outlet property="delegate" destination="TWr-qj-08v" id="htf-2u-iDs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YJt-x1-yLB" firstAttribute="top" secondItem="8ZI-7i-9xl" secondAttribute="top" id="1Tl-6N-CZc"/>
+                            <constraint firstItem="YJt-x1-yLB" firstAttribute="trailing" secondItem="8ZI-7i-9xl" secondAttribute="trailing" id="R8O-36-PMc"/>
+                            <constraint firstAttribute="bottom" secondItem="YJt-x1-yLB" secondAttribute="bottom" id="UMM-vE-YeS"/>
+                            <constraint firstItem="YJt-x1-yLB" firstAttribute="leading" secondItem="8ZI-7i-9xl" secondAttribute="leading" id="gZf-cB-hwu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8ZI-7i-9xl"/>
                     </view>
                     <navigationItem key="navigationItem" id="a6d-yc-ou7"/>
+                    <connections>
+                        <outlet property="tableView" destination="YJt-x1-yLB" id="3Vf-zF-iJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiT-av-5vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="121"/>
+            <point key="canvasLocation" x="1446.376811594203" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AqM-yj-Bmr">

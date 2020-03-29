@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  rezi
 //
 //  Created by Pat Trudel on 2020-03-28.
@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         fetchBusinesses()
     }
     
+// MARK: - Initial Setup
+    
     func setupNavBar() {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "redZ"))
         imageView.contentMode = .scaleAspectFit
@@ -30,21 +32,6 @@ class HomeViewController: UIViewController {
     func registerCells() {
         tableView.register(BusinessTableViewCell.nib, forCellReuseIdentifier: BusinessTableViewCell.reuseIdentifier)
         tableView.register(FeaturedTableViewCell.nib, forCellReuseIdentifier: FeaturedTableViewCell.reuseIdentifier)
-    }
-    
-    func fetchBusinesses() {
-        NetworkManager.shared.searchForBusiness(term: "design", latitude: "45.450573273797474", longitude: "-73.64710990655271") { [weak self] (result) in
-            switch result {
-            case .success(let businesses):
-                self?.businesses = businesses
-                self?.setupFeaturedSections()
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            case .failure(let error):
-                print("Did fail with error: \(error.localizedDescription)")
-            }
-        }
     }
     
     func setupFeaturedSections() {
@@ -62,6 +49,32 @@ class HomeViewController: UIViewController {
         ]
     }
     
+    func fetchBusinesses() {
+        NetworkManager.shared.searchForBusiness(term: "design", latitude: "45.450573273797474", longitude: "-73.64710990655271") { [weak self] (result) in
+            switch result {
+            case .success(let businesses):
+                self?.businesses = businesses
+                self?.setupFeaturedSections()
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print("Did fail with error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+// MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dvc = segue.destination as? DetailViewController,
+            let business = sender as? Business {
+            dvc.business = business
+        }
+    }
+    
+// MARK: - Cell Factory
+    
     func getSingleBusinessCell(at index: Int) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BusinessTableViewCell.reuseIdentifier) as! BusinessTableViewCell
         let business = businesses[index]
@@ -72,11 +85,14 @@ class HomeViewController: UIViewController {
     func getFeaturedCell(at section: Int) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeaturedTableViewCell.reuseIdentifier) as! FeaturedTableViewCell
         let featuredSection = featuredSections[section]
-        cell.configure(with: featuredSection)
+        cell.configure(with: featuredSection, delegate: self)
         return cell
     }
     
 }
+
+
+// MARK: - TableView Delegate // Data Source
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -102,6 +118,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard featuredSections.count == 0 || indexPath.section < featuredSections.count + 1 else { return }
+        let business = businesses[indexPath.item]
+        performSegue(withIdentifier: "showDetail", sender: business)
+    }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrolledDown = scrollView.panGestureRecognizer.translation(in: scrollView).y <= 0
@@ -110,8 +132,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension HomeViewController: BusinessTableViewCellDelegate {
-    func didTapFavorite() {
-        // Navigate to calendar booking page.
+// MARK: - FeaturedTableViewCellDelegate
+
+extension HomeViewController: FeaturedTableViewCellDelegate {
+    
+    func didSelect(business: Business) {
+        performSegue(withIdentifier: "showDetail", sender: business)
     }
+    
+}
+
+// MARK: - BusinessTableViewCellDelegate
+
+extension HomeViewController: BusinessTableViewCellDelegate {
+    
+    func didTapFavorite() {
+        //TODO: Handle networking for favoriting a business.
+    }
+    
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 class Business: Decodable {
+    
     var id: String? = nil
     var phone: String? = nil
     var imageURL: String? = nil

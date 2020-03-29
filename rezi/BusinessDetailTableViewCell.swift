@@ -1,32 +1,36 @@
 //
-//  BusinessTableViewCell.swift
+//  BusinessDetailTableViewCell.swift
 //  rezi
 //
-//  Created by Pat Trudel on 2020-03-28.
+//  Created by Pat Trudel on 2020-03-29.
 //  Copyright © 2020 Pat Trudel. All rights reserved.
 //
 
 import UIKit
 
-protocol BusinessTableViewCellDelegate: class {
+protocol BusinessDetailTableViewCellDelegate: class {
     func didTapFavorite()
+    func didTapCall()
+    func didTapCalendar()
 }
 
-class BusinessTableViewCell: UITableViewCell {
+class BusinessDetailTableViewCell: UITableViewCell {
     
-    static let nib = UINib(nibName: "BusinessTableViewCell", bundle: .main)
-    static let reuseIdentifier = "BusinessTableViewCell"
+    static let nib = UINib(nibName: "BusinessDetailTableViewCell", bundle: .main)
+    static let reuseIdentifier = "BusinessDetailTableViewCell"
     
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var calendarButton: UIButton!
+    @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    private weak var delegate: BusinessTableViewCellDelegate? = nil
+    private weak var delegate: BusinessDetailTableViewCellDelegate? = nil
     private var business: Business? = nil
     
-    func configure(with business: Business, delegate: BusinessTableViewCellDelegate) {
+    func configure(with business: Business, delegate: BusinessDetailTableViewCellDelegate) {
         self.delegate = delegate
         self.business = business
         business.getImage { [weak self] (result) in
@@ -46,12 +50,6 @@ class BusinessTableViewCell: UITableViewCell {
         ratingLabel.text = business.getRating()
     }
     
-    @IBAction func didTapFavorite(_ sender: Any) {
-        delegate?.didTapFavorite()
-        HapticManager.shared.fire(impactStyle: .light, notifStyle: nil, intensity: 1.0)
-        favoriteButton.tintColor = favoriteButton.tintColor == .systemRed ? .systemGray : .systemRed
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         favoriteButton.tintColor = .systemGray
@@ -59,6 +57,20 @@ class BusinessTableViewCell: UITableViewCell {
         titleLabel.text = nil
         subtitleLabel.text = nil
         ratingLabel.text = nil
+    }
+    
+    @IBAction func didTapCalendar(_ sender: Any) {
+        delegate?.didTapCalendar()
+    }
+    
+    @IBAction func didTapCall(_ sender: Any) {
+        delegate?.didTapCall()
+    }
+    
+    @IBAction func didTapFavorite(_ sender: Any) {
+        delegate?.didTapFavorite()
+        HapticManager.shared.fire(impactStyle: .light, notifStyle: nil, intensity: 1.0)
+        favoriteButton.tintColor = favoriteButton.tintColor == .systemRed ? .systemGray : .systemRed
     }
     
 }
