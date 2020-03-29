@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--rezi-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rezi" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="rezi" id="eSu-hS-xn4"/>
+                    <navigationItem key="navigationItem" id="eSu-hS-xn4"/>
                     <connections>
                         <outlet property="tableView" destination="vja-hs-Lt6" id="Ck8-6i-qxV"/>
                     </connections>

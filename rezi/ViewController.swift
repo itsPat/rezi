@@ -16,9 +16,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
+        registerCells()
+        fetchBusinesses()
+    }
+    
+    func setupNavBar() {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "redZ"))
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+    }
+    
+    func registerCells() {
         tableView.register(BusinessTableViewCell.nib, forCellReuseIdentifier: BusinessTableViewCell.reuseIdentifier)
         tableView.register(FeaturedTableViewCell.nib, forCellReuseIdentifier: FeaturedTableViewCell.reuseIdentifier)
-        fetchBusinesses()
     }
     
     func fetchBusinesses() {
@@ -92,6 +103,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrolledDown = scrollView.panGestureRecognizer.translation(in: scrollView).y <= 0
+        navigationController?.setNavigationBarHidden(scrolledDown, animated: true)
+    }
+    
 }
 
 extension ViewController: BusinessTableViewCellDelegate {
