@@ -50,9 +50,9 @@ class NetworkManager: NSObject {
             guard let data = data else { return }
             do {
                 let searchResponse = try JSONDecoder().decode(YelpSearchResponse.self, from: data)
-                let businessesWithImages = (searchResponse.businesses ?? []).filter({$0.imageURL != nil}).sorted { (businessA, businessB) -> Bool in
-                    return businessA.distance ?? 0.0 < businessB.distance ?? 0.0
-                }
+                let businessesWithImages = (searchResponse.businesses ?? [])
+                    .filter({$0.imageURL != nil}) // Only get businesses with imageURLs
+                    .sorted(by: {$0.distance ?? 0.0 < $1.distance ?? 0.0}) // Sort by distance.
                 completion(.success(businessesWithImages))
             } catch {
                 completion(.failure(error))
