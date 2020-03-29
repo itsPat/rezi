@@ -8,19 +8,27 @@
 
 import UIKit
 
+protocol BusinessTableViewCellDelegate: class {
+    func didTapCalendar()
+}
+
 class BusinessTableViewCell: UITableViewCell {
     
     static let nib = UINib(nibName: "BusinessTableViewCell", bundle: .main)
     static let reuseIdentifier = "BusinessTableViewCell"
+    
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
+    
+    private weak var delegate: BusinessTableViewCellDelegate? = nil
     private var business: Business? = nil
     
-    func configure(with business: Business) {
+    func configure(with business: Business, delegate: BusinessTableViewCellDelegate) {
+        self.delegate = delegate
         self.business = business
         callButton.isHidden = business.phone == nil
         business.getImage { [weak self] (result) in
@@ -48,7 +56,7 @@ class BusinessTableViewCell: UITableViewCell {
     }
     
     @IBAction func didTapCalendar(_ sender: Any) {
-        print("Send them to detail booking page.")
+        delegate?.didTapCalendar()
     }
     
     override func prepareForReuse() {

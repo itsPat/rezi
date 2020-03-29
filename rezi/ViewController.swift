@@ -44,9 +44,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BusinessTableViewCell.reuseIdentifier) as! BusinessTableViewCell
         let business = businesses[indexPath.item]
-        cell.configure(with: business)
+        cell.configure(with: business, delegate: self)
         return cell
     }
 
 }
 
+extension ViewController: BusinessTableViewCellDelegate {
+    func didTapCalendar() {
+        // Navigate to calendar booking page.
+    }
+}

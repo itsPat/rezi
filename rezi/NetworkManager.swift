@@ -29,6 +29,7 @@ class NetworkManager: NSObject {
                            completion: @escaping (Result<[Business], Error>) -> ()) {
         
         var components = URLComponents(string: "https://api.yelp.com/v3/businesses/search")
+        
         components?.queryItems = [
             URLQueryItem(name: "term", value: term),
             URLQueryItem(name: "latitude", value: latitude),
@@ -37,7 +38,6 @@ class NetworkManager: NSObject {
             URLQueryItem(name: "offset", value: "\(offset ?? 0)"),
             URLQueryItem(name: "open_now", value: openNow ?? false ? "true" : "false"),
         ]
-        
         
         guard let url = components?.url else { return }
         var request = URLRequest(url: url)
@@ -61,6 +61,7 @@ class NetworkManager: NSObject {
     }
     
     func getImage(with url: String, completion: @escaping (Result<UIImage, Error>) -> ()) {
+        // Do not call this method directly, use ImageManager.shared.getImage()
         guard let url = URL(string: url) else { return }
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             if let error = err {
