@@ -19,7 +19,8 @@ class BusinessCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     private var business: Business? = nil
     
-    func configure(with business: Business) {
+    func configure(with business: Business?) {
+        guard let business = business else { return }
         self.business = business
         business.getImage { [weak self] (result) in
             switch result {
