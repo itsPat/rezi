@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             switch result {
             case .success(let businesses):
                 self?.businesses = businesses
+                self?.setupFeaturedSections()
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
             FeaturedSection(
                 title: "Your favorites",
                 subtitle: "Places you ♥",
-                businesses: Array(businesses.dropFirst(10))
+                businesses: Array(businesses.dropFirst(20))
             ),
         ]
     }
@@ -63,6 +64,7 @@ class ViewController: UIViewController {
         cell.configure(with: featuredSection)
         return cell
     }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

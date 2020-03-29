@@ -22,6 +22,7 @@
 		A78EDC0D2430E87700171BE6 /* FeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78EDC0B2430E87700171BE6 /* FeaturedTableViewCell.xib */; };
 		A78EDC102430EAD000171BE6 /* BusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */; };
 		A78EDC112430EAD000171BE6 /* BusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78EDC0F2430EAD000171BE6 /* BusinessCollectionViewCell.xib */; };
+		A78EDC132431048100171BE6 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC122431048100171BE6 /* FeaturedSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A78EDC0B2430E87700171BE6 /* FeaturedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedTableViewCell.xib; sourceTree = "<group>"; };
 		A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		A78EDC0F2430EAD000171BE6 /* BusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCollectionViewCell.xib; sourceTree = "<group>"; };
+		A78EDC122431048100171BE6 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				A783AA99242FF8C60097F273 /* Business.swift */,
+				A78EDC122431048100171BE6 /* FeaturedSection.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				A783AA98242FEDB10097F273 /* NetworkManager.swift in Sources */,
 				A78EDC0C2430E87700171BE6 /* FeaturedTableViewCell.swift in Sources */,
 				A783AA9F242FFF840097F273 /* BusinessTableViewCell.swift in Sources */,
+				A78EDC132431048100171BE6 /* FeaturedSection.swift in Sources */,
 				A783AA88242FEC800097F273 /* ViewController.swift in Sources */,
 				A78EDC102430EAD000171BE6 /* BusinessCollectionViewCell.swift in Sources */,
 				A783AA84242FEC800097F273 /* AppDelegate.swift in Sources */,
