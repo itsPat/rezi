@@ -25,6 +25,7 @@
 		A78EDC102430EAD000171BE6 /* BusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */; };
 		A78EDC112430EAD000171BE6 /* BusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78EDC0F2430EAD000171BE6 /* BusinessCollectionViewCell.xib */; };
 		A78EDC132431048100171BE6 /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC122431048100171BE6 /* FeaturedSection.swift */; };
+		A794B67C24314BE200D1E896 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794B67B24314BE200D1E896 /* Extensions.swift */; };
 		A7AD7E352431207B00DD268F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD7E342431207B00DD268F /* DetailViewController.swift */; };
 		A7AD7E382431229B00DD268F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD7E372431229B00DD268F /* HapticManager.swift */; };
 		A7AD7E3B2431290B00DD268F /* BusinessDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD7E392431290B00DD268F /* BusinessDetailTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 		A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		A78EDC0F2430EAD000171BE6 /* BusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		A78EDC122431048100171BE6 /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
+		A794B67B24314BE200D1E896 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A7AD7E342431207B00DD268F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A7AD7E372431229B00DD268F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		A7AD7E392431290B00DD268F /* BusinessDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,11 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				A783AAA3242FFFAF0097F273 /* Models */,
-				A783AAA2242FFFA80097F273 /* Services */,
 				A783AAA4242FFFBB0097F273 /* ReusableViews */,
 				A7AD7E362431208200DD268F /* ViewControllers */,
 				A783AA89242FEC800097F273 /* Main.storyboard */,
 				A783AAA1242FFF8C0097F273 /* Template */,
+				A783AAA2242FFFA80097F273 /* Services */,
+				A794B67A24314BB900D1E896 /* Extensions */,
 			);
 			path = rezi;
 			sourceTree = "<group>";
@@ -144,6 +147,14 @@
 				A78EDC0F2430EAD000171BE6 /* BusinessCollectionViewCell.xib */,
 			);
 			name = ReusableViews;
+			sourceTree = "<group>";
+		};
+		A794B67A24314BB900D1E896 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A794B67B24314BE200D1E896 /* Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A7AD7E362431208200DD268F /* ViewControllers */ = {
@@ -241,6 +252,7 @@
 				A783AA84242FEC800097F273 /* AppDelegate.swift in Sources */,
 				A783AA9C242FFC490097F273 /* ImageManager.swift in Sources */,
 				A7AD7E3B2431290B00DD268F /* BusinessDetailTableViewCell.swift in Sources */,
+				A794B67C24314BE200D1E896 /* Extensions.swift in Sources */,
 				A783AA9A242FF8C60097F273 /* Business.swift in Sources */,
 				A78573C524313F6800D918E8 /* BusinessDetailMapTableViewCell.swift in Sources */,
 				A7AD7E382431229B00DD268F /* HapticManager.swift in Sources */,

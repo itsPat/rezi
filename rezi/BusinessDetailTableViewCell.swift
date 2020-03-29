@@ -37,9 +37,7 @@ class BusinessDetailTableViewCell: UITableViewCell {
             switch result {
             case .success(let image):
                 if self?.business?.id == business.id {
-                    DispatchQueue.main.async {
-                        self?.mainImageView.image = image
-                    }
+                    self?.mainImageView.setImageWithAnimation(image: image)
                 }
             case .failure(_):
                 break // Place a default image.

@@ -26,9 +26,7 @@ class BusinessCollectionViewCell: UICollectionViewCell {
             switch result {
             case .success(let image):
                 if self?.business?.id == business.id {
-                    DispatchQueue.main.async {
-                        self?.imageView.image = image
-                    }
+                    self?.imageView.setImageWithAnimation(image: image)
                 }
             case .failure(_):
                 break // Place a default image.
