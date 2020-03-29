@@ -11,7 +11,7 @@ import UIKit
 protocol BusinessDetailTableViewCellDelegate: class {
     func didTapFavorite()
     func didTapCall()
-    func didTapCalendar()
+    func didTapLocation()
 }
 
 class BusinessDetailTableViewCell: UITableViewCell {
@@ -23,7 +23,7 @@ class BusinessDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var calendarButton: UIButton!
+    @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
@@ -59,8 +59,8 @@ class BusinessDetailTableViewCell: UITableViewCell {
         ratingLabel.text = nil
     }
     
-    @IBAction func didTapCalendar(_ sender: Any) {
-        delegate?.didTapCalendar()
+    @IBAction func didTapLocation(_ sender: Any) {
+        delegate?.didTapLocation()
     }
     
     @IBAction func didTapCall(_ sender: Any) {

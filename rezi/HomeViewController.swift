@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
     }
     
     func fetchBusinesses() {
-        NetworkManager.shared.searchForBusiness(term: "design", latitude: "45.450573273797474", longitude: "-73.64710990655271") { [weak self] (result) in
+        NetworkManager.shared.searchForBusiness(term: "hair", latitude: "45.450573273797474", longitude: "-73.64710990655271") { [weak self] (result) in
             switch result {
             case .success(let businesses):
                 self?.businesses = businesses

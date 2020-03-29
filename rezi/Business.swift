@@ -65,6 +65,16 @@ class Business: Decodable {
         return ratingInStars
     }
     
+    func getLatitude() -> Double? {
+        guard let latitude = coordinates?["latitude"] else { return nil }
+        return latitude
+    }
+    
+    func getLongitude() -> Double? {
+        guard let longitude = coordinates?["longitude"] else { return nil }
+        return longitude
+    }
+    
     func getImage(completion: @escaping (Result<UIImage, Error>) -> ()) {
         ImageManager.shared.getImage(with: imageURL ?? "") { (result) in
             switch result {

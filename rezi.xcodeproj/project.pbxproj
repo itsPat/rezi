@@ -18,6 +18,8 @@
 		A783AA9C242FFC490097F273 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA9B242FFC490097F273 /* ImageManager.swift */; };
 		A783AA9F242FFF840097F273 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA9D242FFF840097F273 /* BusinessTableViewCell.swift */; };
 		A783AAA0242FFF840097F273 /* BusinessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */; };
+		A78573C524313F6800D918E8 /* BusinessDetailMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78573C324313F6800D918E8 /* BusinessDetailMapTableViewCell.swift */; };
+		A78573C624313F6800D918E8 /* BusinessDetailMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78573C424313F6800D918E8 /* BusinessDetailMapTableViewCell.xib */; };
 		A78EDC0C2430E87700171BE6 /* FeaturedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC0A2430E87700171BE6 /* FeaturedTableViewCell.swift */; };
 		A78EDC0D2430E87700171BE6 /* FeaturedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78EDC0B2430E87700171BE6 /* FeaturedTableViewCell.xib */; };
 		A78EDC102430EAD000171BE6 /* BusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */; };
@@ -43,6 +45,8 @@
 		A783AA9B242FFC490097F273 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		A783AA9D242FFF840097F273 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessTableViewCell.xib; sourceTree = "<group>"; };
+		A78573C324313F6800D918E8 /* BusinessDetailMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailMapTableViewCell.swift; sourceTree = "<group>"; };
+		A78573C424313F6800D918E8 /* BusinessDetailMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessDetailMapTableViewCell.xib; sourceTree = "<group>"; };
 		A78EDC0A2430E87700171BE6 /* FeaturedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTableViewCell.swift; sourceTree = "<group>"; };
 		A78EDC0B2430E87700171BE6 /* FeaturedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedTableViewCell.xib; sourceTree = "<group>"; };
 		A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */,
 				A7AD7E392431290B00DD268F /* BusinessDetailTableViewCell.swift */,
 				A7AD7E3A2431290B00DD268F /* BusinessDetailTableViewCell.xib */,
+				A78573C324313F6800D918E8 /* BusinessDetailMapTableViewCell.swift */,
+				A78573C424313F6800D918E8 /* BusinessDetailMapTableViewCell.xib */,
 				A78EDC0A2430E87700171BE6 /* FeaturedTableViewCell.swift */,
 				A78EDC0B2430E87700171BE6 /* FeaturedTableViewCell.xib */,
 				A78EDC0E2430EAD000171BE6 /* BusinessCollectionViewCell.swift */,
@@ -214,6 +220,7 @@
 				A783AA8D242FEC820097F273 /* Assets.xcassets in Resources */,
 				A78EDC112430EAD000171BE6 /* BusinessCollectionViewCell.xib in Resources */,
 				A783AA8B242FEC800097F273 /* Main.storyboard in Resources */,
+				A78573C624313F6800D918E8 /* BusinessDetailMapTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +242,7 @@
 				A783AA9C242FFC490097F273 /* ImageManager.swift in Sources */,
 				A7AD7E3B2431290B00DD268F /* BusinessDetailTableViewCell.swift in Sources */,
 				A783AA9A242FF8C60097F273 /* Business.swift in Sources */,
+				A78573C524313F6800D918E8 /* BusinessDetailMapTableViewCell.swift in Sources */,
 				A7AD7E382431229B00DD268F /* HapticManager.swift in Sources */,
 				A783AA86242FEC800097F273 /* SceneDelegate.swift in Sources */,
 			);

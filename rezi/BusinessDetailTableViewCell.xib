@@ -9,41 +9,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="400" id="KGk-i7-Jjw" customClass="BusinessDetailTableViewCell" customModule="rezi" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="325"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="420" id="KGk-i7-Jjw" customClass="BusinessDetailTableViewCell" customModule="rezi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="325"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mu-dU-VRC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="dXp-Hq-s6d"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="spz-bj-UXc">
-                        <rect key="frame" x="36" y="197" width="248" height="63.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="spz-bj-UXc">
+                        <rect key="frame" x="36" y="270" width="248" height="68.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5N-yr-evz">
-                                <rect key="frame" x="0.0" y="0.0" width="248" height="21.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="all-3T-6sS">
-                                <rect key="frame" x="0.0" y="25.5" width="248" height="17"/>
+                                <rect key="frame" x="0.0" y="30.5" width="248" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL6-Oz-zh7">
-                                <rect key="frame" x="0.0" y="46.5" width="248" height="17"/>
+                                <rect key="frame" x="0.0" y="51.5" width="248" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,33 +46,33 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S4E-y6-XCk">
-                        <rect key="frame" x="82.5" y="268.5" width="155.5" height="37.5"/>
+                        <rect key="frame" x="75" y="358.5" width="170.5" height="42.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHG-Tt-uV8">
-                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="37.5"/>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="calendar.circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapCalendar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9Rd-cU-ySN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pd3-en-leq">
-                                <rect key="frame" x="58.5" y="0.0" width="38.5" height="37.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="42.5"/>
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="phone.circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dVq-Qc-Ez6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHG-Tt-uV8" userLabel="Location Button">
+                                <rect key="frame" x="63.5" y="0.0" width="43.5" height="42.5"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="location.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLocation:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9Rd-cU-ySN"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX7-5T-x1t">
-                                <rect key="frame" x="117" y="0.0" width="38.5" height="37.5"/>
+                                <rect key="frame" x="127" y="0.0" width="43.5" height="42.5"/>
                                 <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7DH-up-67e"/>
@@ -87,7 +82,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="S4E-y6-XCk" firstAttribute="top" secondItem="spz-bj-UXc" secondAttribute="bottom" constant="8" id="5jv-g3-CVa"/>
+                    <constraint firstItem="S4E-y6-XCk" firstAttribute="top" secondItem="spz-bj-UXc" secondAttribute="bottom" constant="20" id="5jv-g3-CVa"/>
                     <constraint firstAttribute="trailingMargin" secondItem="spz-bj-UXc" secondAttribute="trailing" constant="20" id="9rf-fv-4Qe"/>
                     <constraint firstItem="2mu-dU-VRC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IPq-t9-QHk"/>
                     <constraint firstItem="spz-bj-UXc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="L6I-T5-grA"/>
@@ -102,9 +97,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="calendarButton" destination="QHG-Tt-uV8" id="Kda-eZ-CFh"/>
                 <outlet property="callButton" destination="Pd3-en-leq" id="GKM-1b-zq1"/>
                 <outlet property="favoriteButton" destination="hX7-5T-x1t" id="KZO-ui-jgl"/>
+                <outlet property="locationButton" destination="QHG-Tt-uV8" id="Kda-eZ-CFh"/>
                 <outlet property="mainImageView" destination="2mu-dU-VRC" id="pai-ck-veb"/>
                 <outlet property="ratingLabel" destination="eL6-Oz-zh7" id="hBe-iU-rqM"/>
                 <outlet property="subtitleLabel" destination="all-3T-6sS" id="X09-fR-p9D"/>
@@ -114,8 +109,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
         <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="phone.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
