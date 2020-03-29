@@ -111,7 +111,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: BusinessTableViewCellDelegate {
-    func didTapCalendar() {
+    func didTapFavorite() {
         // Navigate to calendar booking page.
     }
 }

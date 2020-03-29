@@ -9,7 +9,7 @@
 import UIKit
 
 protocol BusinessTableViewCellDelegate: class {
-    func didTapCalendar()
+    func didTapFavorite()
 }
 
 class BusinessTableViewCell: UITableViewCell {
@@ -21,8 +21,7 @@ class BusinessTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var calendarButton: UIButton!
-    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     private weak var delegate: BusinessTableViewCellDelegate? = nil
     private var business: Business? = nil
@@ -30,7 +29,6 @@ class BusinessTableViewCell: UITableViewCell {
     func configure(with business: Business, delegate: BusinessTableViewCellDelegate) {
         self.delegate = delegate
         self.business = business
-        callButton.isHidden = business.phone == nil
         business.getImage { [weak self] (result) in
             switch result {
             case .success(let image):
@@ -55,12 +53,15 @@ class BusinessTableViewCell: UITableViewCell {
         }
     }
     
-    @IBAction func didTapCalendar(_ sender: Any) {
-        delegate?.didTapCalendar()
+    @IBAction func didTapFavorite(_ sender: Any) {
+        delegate?.didTapFavorite()
+        HapticManager.shared.fire(impactStyle: .light, notifStyle: nil, intensity: 1.0)
+        favoriteButton.tintColor = favoriteButton.tintColor == .systemRed ? .systemGray : .systemRed
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        favoriteButton.tintColor = .systemGray
         mainImageView.image = nil
         titleLabel.text = nil
         subtitleLabel.text = nil

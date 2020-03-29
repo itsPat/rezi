@@ -47,47 +47,31 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TN0-HB-iKs">
-                        <rect key="frame" x="205" y="168" width="95" height="42.5"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-hn-3oW">
-                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="42.5"/>
-                                <state key="normal" image="calendar.circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapCalendar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wr7-AR-FzN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci1-R2-6bG">
-                                <rect key="frame" x="51.5" y="0.0" width="43.5" height="42.5"/>
-                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="phone.circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qQL-G7-Jfx"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-hn-3oW">
+                        <rect key="frame" x="261.5" y="170.5" width="38.5" height="37.5"/>
+                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="heart.circle.fill" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large"/>
+                        </state>
+                        <connections>
+                            <action selector="didTapFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wr7-AR-FzN"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="sCS-w8-GIa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="5Od-jW-cxI"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hrj-cE-Qtu" secondAttribute="bottom" constant="8" id="97k-Qd-529"/>
-                    <constraint firstItem="TN0-HB-iKs" firstAttribute="trailing" secondItem="sCS-w8-GIa" secondAttribute="trailing" id="QNj-Ug-owg"/>
+                    <constraint firstItem="1R9-hn-3oW" firstAttribute="centerY" secondItem="hrj-cE-Qtu" secondAttribute="centerY" id="Nl2-Mz-QZV"/>
                     <constraint firstItem="sCS-w8-GIa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="XFG-nC-60O"/>
-                    <constraint firstItem="TN0-HB-iKs" firstAttribute="centerY" secondItem="hrj-cE-Qtu" secondAttribute="centerY" id="gfT-zb-yaB"/>
+                    <constraint firstItem="1R9-hn-3oW" firstAttribute="trailing" secondItem="sCS-w8-GIa" secondAttribute="trailing" id="Z97-Lc-VMC"/>
                     <constraint firstItem="hrj-cE-Qtu" firstAttribute="top" secondItem="sCS-w8-GIa" secondAttribute="bottom" constant="8" id="jdf-6H-feZ"/>
                     <constraint firstItem="hrj-cE-Qtu" firstAttribute="leading" secondItem="sCS-w8-GIa" secondAttribute="leading" id="l3r-C6-wxF"/>
-                    <constraint firstItem="TN0-HB-iKs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hrj-cE-Qtu" secondAttribute="trailing" constant="20" id="orW-t2-bfu"/>
                     <constraint firstAttribute="trailing" secondItem="sCS-w8-GIa" secondAttribute="trailing" constant="20" id="ybT-Hp-tyv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="calendarButton" destination="1R9-hn-3oW" id="ezR-LB-rgu"/>
-                <outlet property="callButton" destination="ci1-R2-6bG" id="DdE-GO-aua"/>
+                <outlet property="favoriteButton" destination="1R9-hn-3oW" id="ezR-LB-rgu"/>
                 <outlet property="mainImageView" destination="sCS-w8-GIa" id="AIQ-aV-4Vm"/>
                 <outlet property="ratingLabel" destination="bRk-7U-l7H" id="02F-kG-TmO"/>
                 <outlet property="subtitleLabel" destination="23C-cy-3ro" id="aoo-dP-O9q"/>
@@ -97,7 +81,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="phone.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

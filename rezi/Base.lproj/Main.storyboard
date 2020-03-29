@@ -36,11 +36,28 @@
                     <navigationItem key="navigationItem" id="eSu-hS-xn4"/>
                     <connections>
                         <outlet property="tableView" destination="vja-hs-Lt6" id="Ck8-6i-qxV"/>
+                        <segue destination="TWr-qj-08v" kind="show" id="1QM-UK-hN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="120.53571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Az8-qz-Bca">
+            <objects>
+                <viewController id="TWr-qj-08v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qD7-E7-CfN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8ZI-7i-9xl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a6d-yc-ou7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiT-av-5vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AqM-yj-Bmr">
@@ -50,6 +67,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XUQ-kU-eOt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
