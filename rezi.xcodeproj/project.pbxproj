@@ -13,6 +13,11 @@
 		A783AA8B242FEC800097F273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A783AA89242FEC800097F273 /* Main.storyboard */; };
 		A783AA8D242FEC820097F273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A783AA8C242FEC820097F273 /* Assets.xcassets */; };
 		A783AA90242FEC820097F273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A783AA8E242FEC820097F273 /* LaunchScreen.storyboard */; };
+		A783AA98242FEDB10097F273 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA97242FEDB10097F273 /* NetworkManager.swift */; };
+		A783AA9A242FF8C60097F273 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA99242FF8C60097F273 /* Business.swift */; };
+		A783AA9C242FFC490097F273 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA9B242FFC490097F273 /* ImageManager.swift */; };
+		A783AA9F242FFF840097F273 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783AA9D242FFF840097F273 /* BusinessTableViewCell.swift */; };
+		A783AAA0242FFF840097F273 /* BusinessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A783AA8C242FEC820097F273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A783AA8F242FEC820097F273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A783AA91242FEC820097F273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A783AA97242FEDB10097F273 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A783AA99242FF8C60097F273 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		A783AA9B242FFC490097F273 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		A783AA9D242FFF840097F273 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
+		A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		A783AA82242FEC800097F273 /* rezi */ = {
 			isa = PBXGroup;
 			children = (
-				A783AA83242FEC800097F273 /* AppDelegate.swift */,
-				A783AA85242FEC800097F273 /* SceneDelegate.swift */,
+				A783AAA3242FFFAF0097F273 /* Models */,
+				A783AAA2242FFFA80097F273 /* Services */,
+				A783AAA4242FFFBB0097F273 /* ReusableViews */,
 				A783AA87242FEC800097F273 /* ViewController.swift */,
 				A783AA89242FEC800097F273 /* Main.storyboard */,
+				A783AAA1242FFF8C0097F273 /* Template */,
+			);
+			path = rezi;
+			sourceTree = "<group>";
+		};
+		A783AAA1242FFF8C0097F273 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				A783AA83242FEC800097F273 /* AppDelegate.swift */,
+				A783AA85242FEC800097F273 /* SceneDelegate.swift */,
 				A783AA8C242FEC820097F273 /* Assets.xcassets */,
 				A783AA8E242FEC820097F273 /* LaunchScreen.storyboard */,
 				A783AA91242FEC820097F273 /* Info.plist */,
 			);
-			path = rezi;
+			name = Template;
+			sourceTree = "<group>";
+		};
+		A783AAA2242FFFA80097F273 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A783AA9B242FFC490097F273 /* ImageManager.swift */,
+				A783AA97242FEDB10097F273 /* NetworkManager.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A783AAA3242FFFAF0097F273 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A783AA99242FF8C60097F273 /* Business.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A783AAA4242FFFBB0097F273 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				A783AA9D242FFF840097F273 /* BusinessTableViewCell.swift */,
+				A783AA9E242FFF840097F273 /* BusinessTableViewCell.xib */,
+			);
+			name = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A783AA90242FEC820097F273 /* LaunchScreen.storyboard in Resources */,
+				A783AAA0242FFF840097F273 /* BusinessTableViewCell.xib in Resources */,
 				A783AA8D242FEC820097F273 /* Assets.xcassets in Resources */,
 				A783AA8B242FEC800097F273 /* Main.storyboard in Resources */,
 			);
@@ -138,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A783AA98242FEDB10097F273 /* NetworkManager.swift in Sources */,
+				A783AA9F242FFF840097F273 /* BusinessTableViewCell.swift in Sources */,
 				A783AA88242FEC800097F273 /* ViewController.swift in Sources */,
 				A783AA84242FEC800097F273 /* AppDelegate.swift in Sources */,
+				A783AA9C242FFC490097F273 /* ImageManager.swift in Sources */,
+				A783AA9A242FF8C60097F273 /* Business.swift in Sources */,
 				A783AA86242FEC800097F273 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DTTK359L6E;
 				INFOPLIST_FILE = rezi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DTTK359L6E;
 				INFOPLIST_FILE = rezi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
