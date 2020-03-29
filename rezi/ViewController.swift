@@ -15,10 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(
-            UINib(nibName: "BusinessTableViewCell", bundle: .main),
-            forCellReuseIdentifier: BusinessTableViewCell.reuseIdentifier
-        )
+        tableView.register(BusinessTableViewCell.nib, forCellReuseIdentifier: BusinessTableViewCell.reuseIdentifier)
         fetchBusinesses()
     }
     
@@ -45,9 +42,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: BusinessTableViewCell.reuseIdentifier) as? BusinessTableViewCell else {
-            return UITableViewCell(style: .default, reuseIdentifier: "")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: BusinessTableViewCell.reuseIdentifier) as! BusinessTableViewCell
         let business = businesses[indexPath.item]
         cell.configure(with: business)
         return cell

@@ -10,6 +10,7 @@ import UIKit
 
 class BusinessTableViewCell: UITableViewCell {
     
+    static let nib = UINib(nibName: "BusinessTableViewCell", bundle: .main)
     static let reuseIdentifier = "BusinessTableViewCell"
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
