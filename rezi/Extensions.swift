@@ -13,10 +13,18 @@ extension UIImageView {
         DispatchQueue.main.async { [weak self] in
             guard let `self` = self else { return }
             UIView.transition(with: self,
-            duration: 0.5,
+            duration: 0.25,
             options: .transitionCrossDissolve,
             animations: { self.image = image },
             completion: nil)
         }
+    }
+}
+
+
+extension UINavigationBar {
+    func applyReziStyle() {
+        self.isTranslucent = false
+        self.backgroundColor = .systemBackground
     }
 }

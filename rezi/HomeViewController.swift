@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         featuredSections = [
             FeaturedSection(
                 title: "Featured",
-                subtitle: "Don't miss out on these deals",
+                subtitle: "Don't miss out on these ★",
                 businesses: Array(businesses.dropFirst(10))
             ),
             FeaturedSection(
@@ -50,17 +50,20 @@ class HomeViewController: UIViewController {
     }
     
     func fetchBusinesses() {
-        NetworkManager.shared.searchForBusiness(term: "hair", latitude: "45.450573273797474", longitude: "-73.64710990655271") { [weak self] (result) in
-            switch result {
-            case .success(let businesses):
-                self?.businesses = businesses
-                self?.setupFeaturedSections()
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
+        NetworkManager.shared.searchForBusiness(
+            term: "hair",
+            latitude: "45.450573273797474",
+            longitude: "-73.64710990655271") { [weak self] (result) in
+                switch result {
+                case .success(let businesses):
+                    self?.businesses = businesses
+                    self?.setupFeaturedSections()
+                    DispatchQueue.main.async {
+                        self?.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print("Did fail with error: \(error.localizedDescription)")
                 }
-            case .failure(let error):
-                print("Did fail with error: \(error.localizedDescription)")
-            }
         }
     }
     
